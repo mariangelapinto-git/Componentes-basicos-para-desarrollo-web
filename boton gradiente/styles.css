@@ -1,0 +1,64 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a1c1e;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .button {
+  display: block;
+  height: 50px;
+  width: 185px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.container .button:after {
+  position: absolute;
+  content: " ";
+  display: inline-block;
+  background: #4c5f80;
+  background: linear-gradient(
+    45deg,
+    #fbfdfb 0%,
+    #cf0bb2 25%,
+    #460aa7 51%,
+    #124f94 100%
+  );
+  height: 50px;
+  width: 380px;
+  z-index: -1;
+  transform: translate(-280px);
+  transition: transform 0.4s ease-in;
+}
+
+.container .button:hover::after {
+  transform: translate(-200px);
+}
+
+.container .button span {
+  position: relative;
+  top: 16px;
+}
